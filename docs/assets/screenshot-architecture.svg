@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#eebbc3"/>
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+    </marker>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" rx="8"/>
+  <text x="400" y="35" fill="#eebbc3" font-size="18" font-weight="bold" text-anchor="middle">Architektur-Uebersicht</text>
+
+  <!-- iPhone -->
+  <rect x="30" y="80" width="140" height="80" fill="#232946" rx="10" stroke="#eebbc3" stroke-width="1.5"/>
+  <text x="100" y="112" fill="#eebbc3" font-size="13" text-anchor="middle" font-weight="bold">iPhone</text>
+  <text x="100" y="130" fill="#888" font-size="11" text-anchor="middle">ABS iOS App</text>
+  <text x="100" y="145" fill="#666" font-size="10" text-anchor="middle">Stream + Offline</text>
+
+  <!-- Tailscale Cloud -->
+  <rect x="230" y="60" width="160" height="50" fill="none" rx="25" stroke="#4a6fa5" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="310" y="82" fill="#4a6fa5" font-size="12" text-anchor="middle">Tailscale VPN</text>
+  <text x="310" y="98" fill="#666" font-size="10" text-anchor="middle">Sicherer Tunnel</text>
+
+  <!-- Arrow iPhone -> Tailscale -->
+  <line x1="170" y1="105" x2="228" y2="85" stroke="#eebbc3" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- LAN label -->
+  <text x="310" y="140" fill="#666" font-size="11" text-anchor="middle">oder LAN direkt</text>
+  <line x1="170" y1="130" x2="228" y2="140" stroke="#666" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Synology NAS Box -->
+  <rect x="440" y="60" width="330" height="160" fill="#1e2243" rx="10" stroke="#4a6fa5" stroke-width="1"/>
+  <text x="605" y="82" fill="#4a6fa5" font-size="11" text-anchor="middle">Synology NAS</text>
+
+  <!-- Audiobookshelf Container -->
+  <rect x="460" y="95" width="180" height="60" fill="#232946" rx="8" stroke="#eebbc3" stroke-width="1.5"/>
+  <text x="550" y="118" fill="#eebbc3" font-size="13" text-anchor="middle" font-weight="bold">Audiobookshelf</text>
+  <text x="550" y="135" fill="#888" font-size="10" text-anchor="middle">Docker Container</text>
+  <text x="550" y="148" fill="#666" font-size="9" text-anchor="middle">Port &lt;port&gt;</text>
+
+  <!-- Ollama -->
+  <rect x="660" y="95" width="95" height="60" fill="#232946" rx="8" stroke="#FF9800" stroke-width="1.5"/>
+  <text x="707" y="118" fill="#FF9800" font-size="12" text-anchor="middle" font-weight="bold">Ollama</text>
+  <text x="707" y="135" fill="#888" font-size="10" text-anchor="middle">LLM</text>
+  <text x="707" y="148" fill="#666" font-size="9" text-anchor="middle">&lt;modell&gt;</text>
+
+  <!-- Arrow Tailscale -> ABS -->
+  <line x1="390" y1="85" x2="458" y2="110" stroke="#eebbc3" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrow ABS <-> Ollama -->
+  <line x1="640" y1="125" x2="658" y2="125" stroke="#FF9800" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Samba -->
+  <rect x="460" y="170" width="80" height="35" fill="#2a2d4a" rx="5"/>
+  <text x="500" y="192" fill="#888" font-size="10" text-anchor="middle">Samba</text>
+
+  <!-- Arrow Samba -->
+  <line x1="500" y1="155" x2="500" y2="170" stroke="#666" stroke-width="1" marker-end="url(#arrow-gray)"/>
+
+  <!-- Storage Section -->
+  <text x="400" y="260" fill="#b8c1ec" font-size="14" font-weight="bold" text-anchor="middle">Speicher (3 Bibliotheken)</text>
+
+  <!-- Library 1 -->
+  <rect x="30" y="280" width="230" height="90" fill="#232946" rx="8" stroke="#4CAF50" stroke-width="1.5"/>
+  <text x="145" y="305" fill="#4CAF50" font-size="12" text-anchor="middle" font-weight="bold">Eigene Hoerbuecher</text>
+  <text x="145" y="322" fill="#888" font-size="10" text-anchor="middle">/audiobooks (Samba, lesen+schreiben)</text>
+  <text x="145" y="340" fill="#666" font-size="10" text-anchor="middle">&lt;pfad-zum-samba-share&gt;</text>
+  <text x="145" y="358" fill="#666" font-size="9" text-anchor="middle">Upload von Workstation moeglich</text>
+
+  <!-- Library 2 -->
+  <rect x="285" y="280" width="230" height="90" fill="#232946" rx="8" stroke="#2196F3" stroke-width="1.5"/>
+  <text x="400" y="305" fill="#2196F3" font-size="12" text-anchor="middle" font-weight="bold">NAS Sammlung</text>
+  <text x="400" y="322" fill="#888" font-size="10" text-anchor="middle">/nas-audiobooks (nur lesen)</text>
+  <text x="400" y="340" fill="#666" font-size="10" text-anchor="middle">&lt;pfad-zur-nas-sammlung&gt;</text>
+  <text x="400" y="358" fill="#666" font-size="9" text-anchor="middle">Bestehende Sammlung auf NAS</text>
+
+  <!-- Library 3 -->
+  <rect x="540" y="280" width="230" height="90" fill="#232946" rx="8" stroke="#FF9800" stroke-width="1.5"/>
+  <text x="655" y="305" fill="#FF9800" font-size="12" text-anchor="middle" font-weight="bold">USB Sammlung</text>
+  <text x="655" y="322" fill="#888" font-size="10" text-anchor="middle">/usb-audiobooks (nur lesen)</text>
+  <text x="655" y="340" fill="#666" font-size="10" text-anchor="middle">&lt;pfad-zur-usb-sammlung&gt;</text>
+  <text x="655" y="358" fill="#666" font-size="9" text-anchor="middle">Bestehende Sammlung auf USB</text>
+
+  <!-- Arrows from ABS to libraries -->
+  <line x1="500" y1="155" x2="145" y2="278" stroke="#4CAF50" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="540" y1="155" x2="400" y2="278" stroke="#2196F3" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="580" y1="155" x2="655" y2="278" stroke="#FF9800" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Enrichment flow label -->
+  <rect x="240" y="400" width="320" height="35" fill="#1e2243" rx="6"/>
+  <text x="400" y="422" fill="#666" font-size="10" text-anchor="middle">Ollama generiert: Zusammenfassung | Genre | Schlaf-Eignung</text>
+
+  <!-- Footer -->
+  <text x="400" y="445" fill="#555" font-size="9" text-anchor="middle">Platzhalter -- echte Adressen und Pfade werden aus Datenschutzgruenden nicht gezeigt</text>
+</svg>

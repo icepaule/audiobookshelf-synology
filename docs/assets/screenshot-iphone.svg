@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 700" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Phone Frame -->
+  <rect x="10" y="10" width="360" height="680" fill="#111" rx="40" stroke="#333" stroke-width="2"/>
+  <rect x="20" y="20" width="340" height="660" fill="url(#bg)" rx="35"/>
+
+  <!-- Status Bar -->
+  <text x="40" y="52" fill="#888" font-size="11">9:41</text>
+  <text x="300" y="52" fill="#888" font-size="11">100%</text>
+
+  <!-- Notch -->
+  <rect x="130" y="20" width="120" height="25" fill="#111" rx="12"/>
+
+  <!-- App Header -->
+  <rect x="20" y="65" width="340" height="50" fill="#232946"/>
+  <text x="190" y="95" fill="#eebbc3" font-size="16" font-weight="bold" text-anchor="middle">Audiobookshelf</text>
+
+  <!-- Server Connection -->
+  <rect x="35" y="125" width="310" height="70" fill="#232946" rx="10"/>
+  <text x="190" y="148" fill="#b8c1ec" font-size="13" text-anchor="middle" font-weight="bold">Server verbinden</text>
+  <rect x="50" y="158" width="280" height="28" fill="#1a1a2e" rx="5"/>
+  <text x="60" y="177" fill="#666" font-size="11">http://&lt;nas-ip&gt;:&lt;port&gt;</text>
+
+  <!-- Login -->
+  <rect x="35" y="210" width="310" height="110" fill="#232946" rx="10"/>
+  <text x="190" y="235" fill="#b8c1ec" font-size="13" text-anchor="middle" font-weight="bold">Anmelden</text>
+  <rect x="50" y="245" width="280" height="28" fill="#1a1a2e" rx="5"/>
+  <text x="60" y="264" fill="#666" font-size="11">&lt;benutzername&gt;</text>
+  <rect x="50" y="280" width="280" height="28" fill="#1a1a2e" rx="5"/>
+  <text x="60" y="299" fill="#666" font-size="11">********</text>
+
+  <!-- Library Selection -->
+  <text x="190" y="348" fill="#b8c1ec" font-size="12" text-anchor="middle">Bibliothek waehlen:</text>
+
+  <rect x="35" y="360" width="310" height="42" fill="#232946" rx="8"/>
+  <text x="55" y="378" fill="#4CAF50" font-size="11">&#9679;</text>
+  <text x="72" y="378" fill="#eebbc3" font-size="12" font-weight="bold">Meine Hoerbuecher</text>
+  <text x="72" y="393" fill="#666" font-size="10">Eigene Sammlung (Samba)</text>
+
+  <rect x="35" y="410" width="310" height="42" fill="#232946" rx="8"/>
+  <text x="55" y="428" fill="#2196F3" font-size="11">&#9679;</text>
+  <text x="72" y="428" fill="#eebbc3" font-size="12" font-weight="bold">NAS Sammlung</text>
+  <text x="72" y="443" fill="#666" font-size="10">Bestehende NAS-Hoerbuecher</text>
+
+  <rect x="35" y="460" width="310" height="42" fill="#232946" rx="8"/>
+  <text x="55" y="478" fill="#FF9800" font-size="11">&#9679;</text>
+  <text x="72" y="478" fill="#eebbc3" font-size="12" font-weight="bold">USB Sammlung</text>
+  <text x="72" y="493" fill="#666" font-size="10">Hoerbuecher von USB-Platte</text>
+
+  <!-- Player Section -->
+  <rect x="35" y="520" width="310" height="120" fill="#232946" rx="10"/>
+  <text x="190" y="548" fill="#b8c1ec" font-size="12" text-anchor="middle" font-weight="bold">Wiedergabe</text>
+
+  <rect x="50" y="555" width="60" height="60" fill="#3d405b" rx="6"/>
+  <text x="65" y="593" fill="#888" font-size="24">&#128214;</text>
+
+  <text x="125" y="575" fill="#eebbc3" font-size="12" font-weight="bold">&lt;Buchtitel&gt;</text>
+  <text x="125" y="592" fill="#888" font-size="10">&lt;Autor&gt;</text>
+
+  <!-- Progress bar -->
+  <rect x="125" y="600" width="200" height="4" fill="#333" rx="2"/>
+  <rect x="125" y="600" width="80" height="4" fill="#eebbc3" rx="2"/>
+
+  <!-- Playback controls -->
+  <text x="170" y="625" fill="#888" font-size="18">&#9664;&#9664;</text>
+  <text x="210" y="628" fill="#eebbc3" font-size="24">&#9654;</text>
+  <text x="250" y="625" fill="#888" font-size="18">&#9654;&#9654;</text>
+
+  <!-- Sleep Timer -->
+  <rect x="35" y="650" width="310" height="25" fill="#1e2243" rx="6"/>
+  <text x="55" y="667" fill="#FF9800" font-size="11">&#9790; Einschlaf-Timer: 30 Min</text>
+  <text x="300" y="667" fill="#666" font-size="10">Aktiv</text>
+
+  <!-- Footer -->
+  <!-- Home indicator -->
+  <rect x="140" y="685" width="100" height="4" fill="#333" rx="2"/>
+</svg>
