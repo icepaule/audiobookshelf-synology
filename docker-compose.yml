@@ -1,0 +1,19 @@
+services:
+  audiobookshelf:
+    image: ${ABS_IMAGE:-ghcr.io/advplyr/audiobookshelf:latest}
+    container_name: ${ABS_CONTAINER_NAME:-audiobookshelf}
+    ports:
+      - "${ABS_PORT:-13378}:80"
+    volumes:
+      # Eigene Hoerbuecher (Samba-Share fuer Uploads von der Workstation)
+      - ${ABS_AUDIOBOOKS_PATH:?ABS_AUDIOBOOKS_PATH must be set}:/audiobooks
+      # Bestehende Sammlungen als separate Mount-Punkte
+      # (jede Sammlung wird als eigene Bibliothek in ABS eingetragen)
+      - ${ABS_MOUNT_NAS:?ABS_MOUNT_NAS must be set}:/nas-audiobooks:ro
+      - ${ABS_MOUNT_USB:?ABS_MOUNT_USB must be set}:/usb-audiobooks:ro
+      # Konfiguration und Metadaten
+      - ${ABS_CONFIG_PATH:-./config}:/config
+      - ${ABS_METADATA_PATH:-./metadata}:/metadata
+    environment:
+      - TZ=${TZ:-Europe/Berlin}
+    restart: unless-stopped

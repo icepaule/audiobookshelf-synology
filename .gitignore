@@ -1,0 +1,12 @@
+# Sensible Daten
+.env
+
+# Audiobookshelf Runtime-Daten
+config/
+metadata/
+
+# macOS
+.DS_Store
+
+# Synology
+@eaDir/
